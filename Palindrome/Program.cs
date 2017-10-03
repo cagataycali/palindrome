@@ -7,18 +7,18 @@ namespace Palindrom
 {
 	class MainClass
 	{
-		public static void Main(string[] args)
+		public static void Main()
 		{
 
-			Stack stack = new Stack();
-			Queue que = new Queue();
+			var stack = new Stack();
+			var que = new Queue();
 
 			Console.WriteLine("Check the text is palindrome or not, can type this text to below for testing purposes");
 			Console.WriteLine("> alyarısını sırayla");
 
 			// Get input from command line.
-			String text = Console.ReadLine();
-			String output = text; // Just monkey style copy input for result output.
+			string text = Console.ReadLine();
+			string output = text; // Just monkey style copy input for result output.
 			bool isPalindrome = true;
 
 			/* 
@@ -29,7 +29,8 @@ namespace Palindrom
 			text = Regex.Replace(text, @"[^\w\s\-]*", "");
 
 			// Remove all whitespace from string. Source: https://stackoverflow.com/a/16346178/8542909
-			text = text.Replace(" ", String.Empty);
+			text = text.Replace(" ", string.Empty);
+			text = text.ToLower();
 
 			// Push and enqueue per char.
 			for (int i = 0; i < text.Length; i++)
