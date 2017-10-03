@@ -30,6 +30,7 @@ namespace Palindrom
 
 			// Remove all whitespace from string. Source: https://stackoverflow.com/a/16346178/8542909
 			text = text.Replace(" ", string.Empty);
+			// Lowercase for english chars like as I i etc.
 			text = text.ToLower();
 
 			// Push and enqueue per char.
